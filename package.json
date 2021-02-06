@@ -1,0 +1,21 @@
+{
+  "name": "-fabienhupel_3_06022021",
+  "version": "1.0.0",
+  "description": "OhMyFood Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabhup/-Fabienhupel_3_06022021.git"
+  },
+  "author": "fabien hupel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabhup/-Fabienhupel_3_06022021/issues"
+  },
+  "homepage": "https://github.com/fabhup/-Fabienhupel_3_06022021#readme",
+  "browserslist": "last 4 versions"
+}
