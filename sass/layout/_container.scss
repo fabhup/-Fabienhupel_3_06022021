@@ -1,6 +1,6 @@
 .container {
-    margin: $layout-margin;
-    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
-    @include border($colour-accent);
+    section:nth-child(2n) {
+        background-color: $colour-light-backgrnd;
+      }
 }
 
