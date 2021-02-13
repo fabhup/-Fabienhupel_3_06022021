@@ -15,7 +15,7 @@
 }
 
 html {
-  font-size: 4.25vw;
+  font-size: 4.25vmin;
 }
 
 body {
@@ -79,9 +79,11 @@ ul {
   -webkit-tap-highlight-color: transparent;
   box-shadow: 0px 5px 4px #d7d7d7;
   font-weight: 500;
+  opacity: 1;
+  transition: all 340ms ease-out;
 }
 .btn:hover {
-  background: linear-gradient(175deg, #ff93e1, #a16be0);
+  opacity: 0.8;
   box-shadow: 0px 5px 4px #bebebe;
 }
 
@@ -113,31 +115,6 @@ ul {
 }
 .footer__link-with-icone--rotate img {
   transform: rotate(-20deg);
-}
-
-.nav {
-  padding-right: 1.2rem;
-  flex: 2 1 auto;
-  text-align: right;
-}
-.nav__link {
-  display: inline;
-  font-size: 3rem;
-  padding-left: 1.5rem;
-}
-.nav__link a {
-  text-decoration: none;
-  color: #9356DC;
-}
-.nav__link--active {
-  color: #FF79DA;
-}
-.nav__link--active:hover {
-  cursor: default;
-  color: #FF79DA;
-}
-.nav__link a:hover {
-  color: #fff;
 }
 
 .container section:nth-child(2n) {
@@ -282,6 +259,7 @@ ul {
 }
 #section-restaurants .restaurant-preview__image {
   height: 72%;
+  width: 100%;
 }
 #section-restaurants .restaurant-preview__image img {
   width: 100%;
