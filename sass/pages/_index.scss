@@ -99,6 +99,7 @@
     background-repeat: no-repeat;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
     background-clip: text;
     font-family: 'shrikhand';
     animation: progressbar-logo $anim-start-duration__progressbar $anim-start-delay__progressbar ease both;

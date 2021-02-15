@@ -454,6 +454,7 @@ main {
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
+  -webkit-background-clip: text;
   background-clip: text;
   font-family: "shrikhand";
   animation: progressbar-logo 6s 350ms ease both;
