@@ -95,14 +95,14 @@
 
 #container-animation  {  
     color:black;
-    background: linear-gradient(90deg,black,black);
-    background-repeat: no-repeat;
+    background: linear-gradient(90deg,black,black) no-repeat;
+    background-size: 0% 0%;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px black;
     -webkit-background-clip: text;
     background-clip: text;
     font-family: 'shrikhand';
-    animation: progressbar-logo $anim-start-duration__progressbar $anim-start-delay__progressbar ease both;
+    animation: progressbar-logo $anim-start-duration__progressbar $anim-start-delay__progressbar ease forwards;
     padding:2.5rem;
     font-size: 2.5rem;
     white-space: nowrap; 

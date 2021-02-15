@@ -8,58 +8,66 @@
 }
 @keyframes progressbar-logo {
   0% {
-    background-size: 0%;
+    background-size: 0% 100%;
+    -webkit-background-size: 0% 100%;
   }
   20% {
-    background-size: 18%;
+    background-size: 18% 100%;
+    -webkit-background-size: 18% 100%;
   }
   30% {
-    background-size: 35%;
+    background-size: 35% 100%;
+    -webkit-background-size: 35% 100%;
     animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
   35% {
-    background-size: 45%;
+    background-size: 45% 100%;
+    -webkit-background-size: 45% 100%;
     animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
   40% {
-    background-size: 51%;
+    background-size: 51% 100%;
+    -webkit-background-size: 51% 100%;
     animation-timing-function: cubic-bezier(0.25, 0.25, 1);
   }
   48% {
-    background-size: 60%;
+    background-size: 60% 100%;
+    -webkit-background-size: 60% 100%;
     animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
   60% {
-    background-size: 70%;
+    background-size: 70% 100%;
+    -webkit-background-size: 70% 100%;
     animation-timing-function: cubic-bezier(0.25, 0.25, 1);
   }
   85%, 100% {
     opacity: 1;
   }
   100% {
-    background-size: 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
   }
 }
 @keyframes bounce-ball {
   0% {
     top: 0;
-    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   20% {
     top: 1.7rem;
-    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   50% {
     top: 0;
-    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   70% {
     top: 1.8rem;
-    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   100% {
     top: 0;
-    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 }
 @keyframes move-ball-X {
@@ -450,14 +458,14 @@ main {
 
 #container-animation {
   color: black;
-  background: linear-gradient(90deg, black, black);
-  background-repeat: no-repeat;
+  background: linear-gradient(90deg, black, black) no-repeat;
+  background-size: 0% 0%;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
   -webkit-background-clip: text;
   background-clip: text;
   font-family: "shrikhand";
-  animation: progressbar-logo 6s 350ms ease both;
+  animation: progressbar-logo 6s 350ms ease forwards;
   padding: 2.5rem;
   font-size: 2.5rem;
   white-space: nowrap;
