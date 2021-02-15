@@ -6,3 +6,108 @@
         opacity: 1;
     }
 }
+
+@keyframes progressbar-logo {
+  
+    0% {
+          background-size: 0%;
+      }   
+      20% {  
+          background-size: 18%;
+      }  
+      30% {   
+        background-size: 35%;
+        animation-timing-function: cubic-bezier(.9,0,.1,1);
+      }
+    35% { 
+      background-size: 45%;
+      animation-timing-function: cubic-bezier(.9,0,.1,1);
+    }  
+      40% {
+          background-size: 51%;
+          animation-timing-function: cubic-bezier(.25,0.25,1);
+      }  
+      48% {    
+          background-size: 60%;
+          animation-timing-function: cubic-bezier(.9,0,.1,1);
+      }  
+      60% { 
+          background-size: 70%;    
+          animation-timing-function: cubic-bezier(.25,0.25,1);   
+      }  
+      85%,100% {
+        opacity: 1; 
+      }
+      100% {
+          background-size: 100%;
+      }
+  }  
+  
+  @keyframes bounce-ball {
+      0% {
+      top: 0;
+          -webkit-animation-timing-function: ease-in;
+      }  
+    20% {
+      top: 1.7rem;
+          -webkit-animation-timing-function: ease-out;
+      }
+      50% {
+      top: 0;
+      -webkit-animation-timing-function: ease-in;
+    }
+    70% {
+      top: 1.8rem;
+      -webkit-animation-timing-function: ease-out;
+    }
+      100% {
+      top: 0;
+          -webkit-animation-timing-function: ease-in;}
+  }
+  
+  @keyframes move-ball-X {
+    0% {transform: translate(-1.5rem,2rem);}   
+    8% {transform: translate(-1.5rem,2rem);}   
+    16% {transform: translate(0.5rem,-0.4rem);
+        transition: transform ease-in-out;}   
+    22% {transform: translate(0.5rem,-0.4rem);
+        transition: transform ease-out;} 
+    28% {transform: translate(2rem,-0.4rem);
+        transition: transform ease-out;} 
+    33% {transform: translate(3.5rem,0rem); 
+        transition: transform ease-out;}
+    48% {transform: translate(6.5rem,0rem);
+        transition: transform ease-out;}
+    58% {transform: translate(8.2rem,-0.4rem);
+        transition: transform ease-in-out;}
+    74% {transform: translate(11rem,0rem);
+        transition: transform ease-in-out;}
+    80% {transform: translate(13rem,-0.4rem);
+        transition: transform ease-in-out;} 
+    96% {transform: translate(14.5rem,2rem);} 
+    100% {transform: translate(-1.5rem,2rem);} 
+  }
+  
+  @keyframes start-animation-visibility  {
+      0% {visibility: visible;}
+      99% {visibility: visible;}
+      100% {visibility: hidden;}
+  }
+
+  @keyframes start-hidden  {
+    0% {
+        visibility: hidden;
+        height:0;
+        overflow: hidden;
+    }
+    99% {
+        visibility: hidden;
+        height:0;
+        overflow: hidden;
+    }
+    100% {
+        visibility: visible;
+        height:unset;
+        overflow: unset;
+    }
+}

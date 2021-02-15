@@ -2,6 +2,7 @@
     padding: $layout-margin $layout-margin $layout-margin*1.5 $layout-margin;
     background: $colour-blackgrey;
     color:white;
+    animation: start-hidden $anim-start-duration $anim-start-delay  ease-in-out forwards;
 
     &__logo {
         height: 1.1rem;

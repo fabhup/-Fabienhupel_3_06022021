@@ -1,6 +1,13 @@
-.container {
+.main-container {
     section:nth-child(2n) {
         background-color: $colour-light-backgrnd;
       }
 }
 
+main
+{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: start-hidden $anim-start-duration $anim-start-delay  ease-in-out forwards;
+}

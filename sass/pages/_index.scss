@@ -66,7 +66,7 @@
             &:hover {
                 path {
                 fill: url(#svg-gradient);
-                animation: anim-fill-like 5s both;
+                animation: anim-fill-like $anim-fill-like-duration $anim-fill-like-delay forwards;
                 stroke: transparent;
                 }
             }
@@ -81,4 +81,39 @@
     &-secondary{
         stop-color: $colour-secondary;
     }
+}
+
+#start-animation {
+    width:100%;
+    height:100%;
+    background-color:#f6f6f6;
+    z-index:9999;
+    position:absolute;
+    @include flex-center;
+    animation: start-animation-visibility $anim-start-duration $anim-start-delay ease-in-out forwards;
+}
+
+#container-animation  {  
+    color:black;
+    background: linear-gradient(90deg,black,black);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    background-clip: text;
+    font-family: 'shrikhand';
+    animation: progressbar-logo $anim-start-duration__progressbar $anim-start-delay__progressbar ease both;
+    padding:2.5rem;
+    font-size: 2.5rem;
+    white-space: nowrap; 
+    position:relative; 
+}   
+    
+.bouncingball {
+    width:1rem;
+    height:1rem; 
+    border-radius:100%;  
+    background:linear-gradient(90deg,$colour-primary,$colour-secondary);
+    animation: bounce-ball $anim-start-duration__bounce-ball  $anim-start-delay__bounce-ball ease-in-out $anim-start-iter-count__bounce-ball, move-ball-X  $anim-start-duration__move-ball-X $anim-start-delay__move-ball-X;        
+    position:absolute; 
+    transform: translate(-1.5rem,2rem);       
 }

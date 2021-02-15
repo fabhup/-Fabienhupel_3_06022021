@@ -6,18 +6,151 @@
     opacity: 1;
   }
 }
+@keyframes progressbar-logo {
+  0% {
+    background-size: 0%;
+  }
+  20% {
+    background-size: 18%;
+  }
+  30% {
+    background-size: 35%;
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  35% {
+    background-size: 45%;
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  40% {
+    background-size: 51%;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 1);
+  }
+  48% {
+    background-size: 60%;
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  60% {
+    background-size: 70%;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 1);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+@keyframes bounce-ball {
+  0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  20% {
+    top: 1.7rem;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  70% {
+    top: 1.8rem;
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+@keyframes move-ball-X {
+  0% {
+    transform: translate(-1.5rem, 2rem);
+  }
+  8% {
+    transform: translate(-1.5rem, 2rem);
+  }
+  16% {
+    transform: translate(0.5rem, -0.4rem);
+    transition: transform ease-in-out;
+  }
+  22% {
+    transform: translate(0.5rem, -0.4rem);
+    transition: transform ease-out;
+  }
+  28% {
+    transform: translate(2rem, -0.4rem);
+    transition: transform ease-out;
+  }
+  33% {
+    transform: translate(3.5rem, 0rem);
+    transition: transform ease-out;
+  }
+  48% {
+    transform: translate(6.5rem, 0rem);
+    transition: transform ease-out;
+  }
+  58% {
+    transform: translate(8.2rem, -0.4rem);
+    transition: transform ease-in-out;
+  }
+  74% {
+    transform: translate(11rem, 0rem);
+    transition: transform ease-in-out;
+  }
+  80% {
+    transform: translate(13rem, -0.4rem);
+    transition: transform ease-in-out;
+  }
+  96% {
+    transform: translate(14.5rem, 2rem);
+  }
+  100% {
+    transform: translate(-1.5rem, 2rem);
+  }
+}
+@keyframes start-animation-visibility {
+  0% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes start-hidden {
+  0% {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+  99% {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    visibility: visible;
+    height: unset;
+    overflow: unset;
+  }
+}
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 html {
-  font-size: 4.25vmin;
+  font-size: 4.25vw;
 }
 
+@font-face {
+  font-family: "shrikhand";
+  src: url("../../public/font/shrikhand/Shrikhand-Regular.otf") format("truetype");
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -100,6 +233,7 @@ ul {
   padding: 1.2rem 1.2rem 1.8rem 1.2rem;
   background: #353535;
   color: white;
+  animation: start-hidden 7s 0s ease-in-out forwards;
 }
 .footer__logo {
   height: 1.1rem;
@@ -117,8 +251,15 @@ ul {
   transform: rotate(-20deg);
 }
 
-.container section:nth-child(2n) {
+.main-container section:nth-child(2n) {
   background-color: #f6f6f6;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: start-hidden 7s 0s ease-in-out forwards;
 }
 
 .form {
@@ -284,7 +425,7 @@ ul {
 }
 #section-restaurants .restaurant-preview__like:hover path {
   fill: url(#svg-gradient);
-  animation: anim-fill-like 5s both;
+  animation: anim-fill-like 5000ms 0ms forwards;
   stroke: transparent;
 }
 
@@ -293,6 +434,43 @@ ul {
 }
 .gradient__color-secondary {
   stop-color: #FF79DA;
+}
+
+#start-animation {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  z-index: 9999;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: start-animation-visibility 7s 0s ease-in-out forwards;
+}
+
+#container-animation {
+  color: black;
+  background: linear-gradient(90deg, black, black);
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  background-clip: text;
+  font-family: "shrikhand";
+  animation: progressbar-logo 6s 350ms ease both;
+  padding: 2.5rem;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  position: relative;
+}
+
+.bouncingball {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: linear-gradient(90deg, #9356DC, #FF79DA);
+  animation: bounce-ball 1300ms 0ms ease-in-out 6, move-ball-X 6s 0ms;
+  position: absolute;
+  transform: translate(-1.5rem, 2rem);
 }
 
 /*# sourceMappingURL=style.css.map */

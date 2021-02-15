@@ -23,4 +23,16 @@ $colour-dark-backgrnd: #eaeaea;
 $layout-margin: 1.2rem;
 $heading-shadow-size: .55rem;
 
+$anim-start-duration: 7s; 
+$anim-start-delay: 0s;
 
+$anim-start-duration__progressbar: $anim-start-duration - 1s;
+$anim-start-delay__progressbar: 350ms;
+$anim-start-duration__bounce-ball: 1300ms;
+$anim-start-delay__bounce-ball: 0ms;
+$anim-start-iter-count__bounce-ball: 6;
+$anim-start-duration__move-ball-X: $anim-start-duration__progressbar;
+$anim-start-delay__move-ball-X: 0ms;
+
+$anim-fill-like-duration: 5000ms;
+$anim-fill-like-delay: 0ms;
