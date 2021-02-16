@@ -25,7 +25,6 @@ $heading-shadow-size: .55rem;
 
 $anim-start-duration: 7s; 
 $anim-start-delay: 0s;
-
 $anim-start-duration__progressbar: $anim-start-duration - 1s;
 $anim-start-delay__progressbar: 350ms;
 $anim-start-duration__bounce-ball: 1300ms;
@@ -33,6 +32,16 @@ $anim-start-delay__bounce-ball: 0ms;
 $anim-start-iter-count__bounce-ball: 6;
 $anim-start-duration__move-ball-X: $anim-start-duration__progressbar;
 $anim-start-delay__move-ball-X: 0ms;
+
+$anim-start-restaurants-duration: 2.5s; 
+$anim-start-restaurants-delay: 0s;
+
+$nb-category-menu:3;
+$nb-display-item-menu:3;
+$anim-visibility-menu-item-duration: 0.750s;
+$anim-visibility-menu-item-delay: 0.150s;
+$anim-visibility-menu-category-duration: 0.500s;
+$anim-visibility-menu-category-delay: 0.950s;
 
 $anim-fill-like-duration: 5000ms;
 $anim-fill-like-delay: 0ms;

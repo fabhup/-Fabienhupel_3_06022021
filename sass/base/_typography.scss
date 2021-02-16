@@ -1,9 +1,13 @@
 
 @font-face {
     font-family: "shrikhand";
-    src: url("../../public/font/shrikhand/Shrikhand-Regular.otf") format('truetype');
+    src: url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff2") format('woff2'),
+    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff") format('woff'),
+    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.svg#Shrikhand") format('svg'), /* Legacy iOS */
+    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.ttf") format('truetype');
+    ;
    }
- 
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;

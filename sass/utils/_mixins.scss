@@ -4,6 +4,7 @@
 }
 
 @mixin btn {
+    align-self: center;
     color: $colour-white;
     background: $colour-btn;
     border: none;
@@ -17,6 +18,8 @@
     font-weight: 500;
     opacity:1;
     transition: all 340ms ease-out;
+    min-width:60%;
+    width:max-content;
     &:hover{
         opacity:0.8;
         @include box-shadow($colour-btn-shadow--hover);
