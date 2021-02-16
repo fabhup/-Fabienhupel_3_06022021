@@ -22,6 +22,7 @@
             display:flex;
             align-items:center;
             opacity: 1;
+            transition: all 450ms ease-in-out;
             &::before {
                 position:absolute;
                 left:-0.7rem;
@@ -51,6 +52,7 @@
                 & svg path {
                     fill: $colour-primary;
                   }
+                
             }
 
             & svg {
