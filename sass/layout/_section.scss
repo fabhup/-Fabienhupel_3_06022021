@@ -4,7 +4,6 @@
     align-items:center;
     text-align: center;
     padding: $layout-margin $layout-margin $layout-margin*2 $layout-margin;
-    
     & h1 {
         width: 80%;
     }
@@ -17,3 +16,16 @@
     }
     
 }
+
+
+@media screen and (min-width: 768px)  {
+    .section {
+        padding: $layout-margin $layout-margin*10 $layout-margin*2 $layout-margin*10;
+    
+    & .section__title {
+        align-self: center;
+        }
+    }
+    
+}
+

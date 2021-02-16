@@ -216,10 +216,15 @@
 }
 
 html {
-  font-size: 4.25vw;
+  font-size: 4.25vmin;
   -webkit-tap-highlight-color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 2.25vmin;
+  }
+}
 @font-face {
   font-family: "shrikhand";
   src: url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff2") format("woff2"), url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff") format("woff"), url("../../public/font/shrikhand/shrikhand-v6-latin-regular.svg#Shrikhand") format("svg"), url("../../public/font/shrikhand/shrikhand-v6-latin-regular.ttf") format("truetype");
@@ -333,6 +338,25 @@ ul {
   animation: start-hidden 3s 0s ease-in-out forwards;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 1.2rem 12rem 2.4rem 12rem;
+  }
+  .footer__logo {
+    width: 100%;
+  }
+  .footer__list-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .footer__list-links li {
+    margin: 0rem 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+}
 .main-container {
   overflow: hidden;
   animation: start-hidden 3s 0s ease-in-out forwards;
@@ -388,6 +412,14 @@ ul {
   margin: 1.5rem 0rem 1.5rem 0.2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 1.2rem 12rem 2.4rem 12rem;
+  }
+  .section .section__title {
+    align-self: center;
+  }
+}
 .section__fonctionnement ol {
   list-style: none;
   text-align: left;
@@ -563,6 +595,7 @@ ul {
   position: relative;
   width: 100%;
   height: 15rem;
+  object-fit: cover;
 }
 
 .link-return-home {
@@ -814,22 +847,16 @@ ul {
 }
 
 .anim-restaurant {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .icone {
-  position: fixed;
-  width: 4rem;
-  height: 4rem;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
   background: transparent;
   animation: icone-rotation 3s infinite cubic-bezier(0.7, 0, 0.16, 1);
-  transform: rotate(30deg);
   transform-origin: 10% 10%;
-  right: 8rem;
 }
 
 .icone path {
@@ -838,22 +865,43 @@ ul {
 
 #icone-2 {
   animation: icone-rotation-reverse 3s infinite cubic-bezier(0.7, 0, 0.16, 1);
-  position: fixed;
-  transform: rotate(-30deg);
-  transform-origin: 10% 10%;
 }
 
 .loader-restaurant {
-  color: #353535;
-  font-size: 8rem;
+  color: #99E2D0;
+  font-size: 5rem;
   overflow: hidden;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   position: absolute;
-  margin-bottom: 1rem;
   transform: translateZ(0);
   animation: loader-border 1.7s infinite ease, round 1.7s infinite ease;
+  margin: 1rem 0rem 0 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-menu {
+    padding: 1.2rem 12rem 2.4rem 12rem;
+    border-radius: 0rem;
+  }
+  .restaurant-menu section {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .restaurant-menu .dish__article {
+    width: 25rem;
+  }
+  .restaurant-menu__like {
+    right: -5rem;
+  }
+  .restaurant-menu .section__title::before {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

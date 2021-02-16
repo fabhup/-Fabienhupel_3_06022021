@@ -30,3 +30,24 @@
         animation: start-hidden $anim-start-duration $anim-start-delay  ease-in-out forwards;
     }
 }
+
+@media screen and (min-width: 768px)  {
+    .footer {
+        padding: $layout-margin $layout-margin*10 $layout-margin*2 $layout-margin*10;
+
+        &__logo {
+            width:100%;
+        }
+        &__list-links {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            & li {
+                margin: 0rem 0.5rem;
+                width:100%;
+                text-align: center;
+            }
+        }
+        }
+}

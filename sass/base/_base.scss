@@ -5,7 +5,14 @@
     padding: 0;}
 
 html {
-    // set default font-size to 4vw 
-    font-size: 4.25vw;
+    // set default font-size to 4vmin 
+    font-size: 4.25vmin;
     -webkit-tap-highlight-color: transparent;
+}
+
+
+@media screen and (min-width: 768px)  {
+    html {
+        font-size: 2.25vmin;
+    }
 }
