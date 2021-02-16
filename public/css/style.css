@@ -329,11 +329,11 @@ ul {
   animation: start-hidden 2.5s 0s ease-in-out forwards;
 }
 .footer.footer-home {
-  animation: start-hidden 7s 0s ease-in-out forwards;
+  animation: start-hidden 3s 0s ease-in-out forwards;
 }
 
 .main-container {
-  animation: start-hidden 7s 0s ease-in-out forwards;
+  animation: start-hidden 3s 0s ease-in-out forwards;
 }
 .main-container section:nth-child(2n) {
   background-color: #f6f6f6;
@@ -524,7 +524,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: start-animation-visibility 7s 0s ease-in-out forwards;
+  animation: start-animation-visibility 3s 0s ease-in-out forwards;
 }
 
 #container-animation {
@@ -536,7 +536,7 @@ ul {
   -webkit-background-clip: text;
   background-clip: text;
   font-family: "shrikhand";
-  animation: progressbar-logo 6s 350ms ease forwards;
+  animation: progressbar-logo 2s 175ms ease forwards;
   padding: 2.5rem;
   font-size: 2.5rem;
   white-space: nowrap;
@@ -548,7 +548,7 @@ ul {
   height: 1rem;
   border-radius: 100%;
   background: linear-gradient(90deg, #9356DC, #FF79DA);
-  animation: bounce-ball 1300ms 0ms ease-in-out 6, move-ball-X 6s 0ms;
+  animation: bounce-ball 880ms 0ms ease-in-out 6, move-ball-X 2s 0ms;
   position: absolute;
   transform: translate(-1.5rem, 2rem);
 }
@@ -556,6 +556,7 @@ ul {
 .restaurant-picture {
   position: relative;
   width: 100%;
+  height: 15rem;
 }
 
 .link-return-home {
@@ -686,43 +687,67 @@ ul {
 }
 .restaurant-menu .section__menu .list-menu {
   height: 0;
-  animation: anim-visibility-menu 1s ease-in-out forwards;
+  animation: anim-visibility-menu 0.5s ease-in-out forwards;
 }
 .restaurant-menu .section__menu .list-menu--1 {
-  animation-delay: 3.45s;
+  animation-delay: 3.05s;
 }
 .restaurant-menu .section__menu .list-menu--1 .item-menu--1 {
-  animation-delay: 3.6s;
+  animation-delay: 3.2s;
 }
 .restaurant-menu .section__menu .list-menu--1 .item-menu--2 {
-  animation-delay: 3.75s;
+  animation-delay: 3.35s;
 }
 .restaurant-menu .section__menu .list-menu--1 .item-menu--3 {
-  animation-delay: 3.9s;
+  animation-delay: 3.5s;
+}
+.restaurant-menu .section__menu .list-menu--1 .item-menu--4 {
+  animation-delay: 3.65s;
 }
 .restaurant-menu .section__menu .list-menu--2 {
-  animation-delay: 4.4s;
+  animation-delay: 3.6s;
 }
 .restaurant-menu .section__menu .list-menu--2 .item-menu--1 {
-  animation-delay: 4.55s;
+  animation-delay: 3.75s;
 }
 .restaurant-menu .section__menu .list-menu--2 .item-menu--2 {
-  animation-delay: 4.7s;
+  animation-delay: 3.9s;
 }
 .restaurant-menu .section__menu .list-menu--2 .item-menu--3 {
-  animation-delay: 4.85s;
+  animation-delay: 4.05s;
+}
+.restaurant-menu .section__menu .list-menu--2 .item-menu--4 {
+  animation-delay: 4.2s;
 }
 .restaurant-menu .section__menu .list-menu--3 {
-  animation-delay: 5.35s;
+  animation-delay: 4.15s;
 }
 .restaurant-menu .section__menu .list-menu--3 .item-menu--1 {
-  animation-delay: 5.5s;
+  animation-delay: 4.3s;
 }
 .restaurant-menu .section__menu .list-menu--3 .item-menu--2 {
-  animation-delay: 5.65s;
+  animation-delay: 4.45s;
 }
 .restaurant-menu .section__menu .list-menu--3 .item-menu--3 {
-  animation-delay: 5.8s;
+  animation-delay: 4.6s;
+}
+.restaurant-menu .section__menu .list-menu--3 .item-menu--4 {
+  animation-delay: 4.75s;
+}
+.restaurant-menu .section__menu .list-menu--4 {
+  animation-delay: 4.7s;
+}
+.restaurant-menu .section__menu .list-menu--4 .item-menu--1 {
+  animation-delay: 4.85s;
+}
+.restaurant-menu .section__menu .list-menu--4 .item-menu--2 {
+  animation-delay: 5s;
+}
+.restaurant-menu .section__menu .list-menu--4 .item-menu--3 {
+  animation-delay: 5.15s;
+}
+.restaurant-menu .section__menu .list-menu--4 .item-menu--4 {
+  animation-delay: 5.3s;
 }
 .restaurant-menu .dish__details {
   display: flex;
