@@ -217,6 +217,7 @@
 
 html {
   font-size: 4.25vw;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @font-face {
