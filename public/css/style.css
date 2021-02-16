@@ -496,10 +496,13 @@ ul {
 }
 #section-restaurants .restaurant-preview__like {
   position: absolute;
-  bottom: 1.8rem;
-  right: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  bottom: 1.5rem;
+  right: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+#section-restaurants .restaurant-preview__like svg {
+  margin: 0.5rem;
 }
 #section-restaurants .restaurant-preview__like svg path {
   fill: transparent;
@@ -604,10 +607,13 @@ ul {
 }
 .restaurant-menu__like {
   position: absolute;
-  top: 1.2rem;
+  top: 0.8rem;
   right: 1rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.restaurant-menu__like svg {
+  margin: 0.5rem;
 }
 .restaurant-menu__like svg path {
   fill: transparent;
@@ -684,7 +690,7 @@ ul {
   left: 0;
   bottom: 0;
   height: 1px;
-  width: 10%;
+  width: 15%;
   border-bottom: 4px solid #99e2d0;
 }
 .restaurant-menu .section__menu .item-menu {

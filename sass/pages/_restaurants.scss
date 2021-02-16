@@ -49,11 +49,12 @@
 
     &__like {
         position:absolute;
-        top:1.2rem;
+        top:0.8rem;
         right:1rem;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
         & svg {
+            margin:0.5rem;
             & path{
                 fill: transparent;
                 stroke: $colour-blackgrey;
@@ -156,7 +157,7 @@
             left    : 0;
             bottom  : 0;
             height  : 1px;
-            width   : 10%;
+            width   : 15%;
             border-bottom: 4px solid $colour-lightgreen;
         }
       }
