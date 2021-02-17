@@ -676,6 +676,7 @@ ul {
 }
 .restaurant-menu .dish__article {
   border: none;
+  box-shadow: 0px 5px 4px #d7d7d7;
   background: white;
   border-radius: 1rem;
   width: 100%;
@@ -689,16 +690,15 @@ ul {
   justify-content: flex-start;
   overflow: hidden;
   outline: none;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-  /*correction bug overflow hidden border corner safari*/
-  mask-image: none;
+  will-change: transform;
+  /*correction bug overflow hidden border corner safari but no shadow*/
 }
 .restaurant-menu .dish__article:hover > .dish__informations {
   width: inherit;
 }
 .restaurant-menu .dish__article:hover > .check-icone {
   width: 5rem;
-  transform: translateX(0);
+  transform: translate(0);
 }
 .restaurant-menu .dish__article:hover svg {
   transform: rotate(360deg);

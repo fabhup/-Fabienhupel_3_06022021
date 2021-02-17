@@ -70,25 +70,9 @@
         }
     }
 
-    // & .list-menu {
-    //     & .item-menu {
-    //         opacity: 0;
-    //         height:0;
-    //         transform: translateY(1rem); 
-    //     }
-    //     &:hover  .item-menu {
-    //         animation: anim-visibility-menu 0.75s ease-in-out forwards;  
-    //         @for $i from 1 through 3 {
-    //             &--#{$i} {
-    //                 animation-delay: 2.8s + ($anim-visibility-menu-delay * $i);
-    //             }
-    //       }
-    //     }
-
-    // }
-
     & .dish__article {
         border:none;
+        @include box-shadow($colour-btn-shadow);
         background: white;
         border-radius: 1rem;
         width: 100%;
@@ -102,15 +86,17 @@
         justify-content:flex-start;
         overflow: hidden;
         outline: none;
-        -webkit-mask-image: -webkit-radial-gradient(white, black); /*correction bug overflow hidden border corner safari*/
-        mask-image: none;
+        will-change: transform; /*correction bug overflow hidden border corner safari but no shadow*/
+        // -webkit-mask-image: -webkit-radial-gradient(white, black); /*correction bug overflow hidden border corner safari but no shadow*/
+        // mask-image: radial-gradient(white, black);
+
         &:hover {
           & > .dish__informations{
             width:inherit;
           }
           & > .check-icone {
             width:5rem;
-            transform:translateX(0);
+            transform:translate(0);
           }
           & svg {
             transform:rotate(360deg);
@@ -217,7 +203,8 @@
         background-color: #99e2d0;
         display:flex;
         align-items: center;
-        justify-content:center; transform:translateX(100%);
+        justify-content:center; 
+        transform:translateX(100%);
         transition: all 480ms ease-out;
         transform-origin:right;
         & svg {
