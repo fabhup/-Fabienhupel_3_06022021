@@ -171,8 +171,8 @@
     background-size: 0% 0%;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.1rem black;
+    background-clip:initial;
     -webkit-background-clip: text;
-    background-clip: text;
     font-family: 'shrikhand';
     animation: progressbar-logo $anim-start-duration__progressbar $anim-start-delay__progressbar ease forwards;
     padding:2.5rem;
@@ -186,8 +186,31 @@
     height:1rem; 
     border-radius:100%;  
     background:linear-gradient(90deg,$colour-primary,$colour-secondary);
-    animation: bounce-ball $anim-start-duration__bounce-ball  $anim-start-delay__bounce-ball ease-in-out $anim-start-iter-count__bounce-ball, move-ball-X  $anim-start-duration__move-ball-X $anim-start-delay__move-ball-X;        
+    animation: bounce-ball $anim-start-duration__bounce-ball  $anim-start-delay__bounce-ball ease-in-out $anim-start-iter-count__bounce-ball, move-ball-X  $anim-start-duration__move-ball-X $anim-start-delay__move-ball-X forwards;        
     position:absolute; 
     transform: translate(-1.5rem,2rem);       
 }
 
+
+@media screen and (min-width: 768px)  {
+    .section__fonctionnement{
+        justify-content: center;
+        align-items: center;
+        & ol {
+            display:flex;
+            justify-content: center;
+            flex-direction:column;
+            align-self: center;
+            max-width: 25rem;
+        }
+    }
+
+    #section-restaurants {
+        & .restaurant-preview{
+            &__article {
+                max-width: 30rem;
+            }
+        
+        }
+    }
+}

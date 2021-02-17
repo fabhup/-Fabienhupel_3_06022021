@@ -25,7 +25,7 @@ $heading-shadow-size: .55rem;
 
 $anim-start-duration: 3s; 
 $anim-start-delay: 0s;
-$anim-start-duration__progressbar: $anim-start-duration - 1s;
+$anim-start-duration__progressbar: $anim-start-duration - 0.5s;
 $anim-start-delay__progressbar: 175ms;
 $anim-start-duration__bounce-ball: 880ms;
 $anim-start-delay__bounce-ball: 0ms;
