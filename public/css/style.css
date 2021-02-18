@@ -607,6 +607,11 @@ ul {
   #section-restaurants .restaurant-preview__article {
     max-width: 30rem;
   }
+
+  .btn {
+    width: 15rem;
+    min-width: unset;
+  }
 }
 .restaurant-picture {
   position: relative;
@@ -915,10 +920,6 @@ ul {
   }
   .restaurant-menu .section__title::before {
     width: 100%;
-  }
-  .restaurant-menu .btn-order {
-    width: 15rem;
-    min-width: unset;
   }
 }
 
