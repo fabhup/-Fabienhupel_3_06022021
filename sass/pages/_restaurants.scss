@@ -1,296 +1,295 @@
-
 .restaurant-picture {
-    position:relative;
-    width:100%;
-    height:15rem;
-    object-fit:cover;
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
 }
 
 .link-return-home {
-    position:absolute;
-    left:0;
-    background-image: url("../../public/img/icones/arrow-left-solid.svg");
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    background-position: center;
-    text-decoration: none;
-    cursor: pointer;
-    text-indent: 100%;
-    color:transparent;
+  position: absolute;
+  left: 0;
+  background-image: url("../../public/img/icones/arrow-left-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: center;
+  text-decoration: none;
+  cursor: pointer;
+  text-indent: 100%;
+  color: transparent;
 }
 
 .restaurant-menu {
-    padding: $layout-margin $layout-margin $layout-margin*2 $layout-margin;
-    background-color: $colour-light-backgrnd;
-    display:flex;
+  padding: $layout-margin $layout-margin $layout-margin * 2 $layout-margin;
+  background-color: $colour-light-backgrnd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem 2rem 0rem 0rem;
+  position: relative;
+  overflow: hidden;
+  bottom: 3rem;
+  left: 0rem;
+  margin-bottom: -3rem;
+  animation: anim-start__hidden $anim-start-restaurants-duration
+    $anim-start-restaurants-delay ease-in-out forwards;
+
+  & h1 {
+    font-family: "shrikhand";
+    text-align: left;
+    margin: 1rem 0rem;
+    align-self: flex-start;
+    font-size: 1.7rem;
+    font-weight: 100;
+  }
+
+  & .section__header {
+    padding: 0;
+    position: relative;
+  }
+
+  &__like {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    & svg {
+      margin: 0.5rem;
+      & path {
+        fill: transparent;
+        stroke: $colour-blackgrey;
+      }
+    }
+    &:hover {
+      path {
+        fill: url(#svg-gradient);
+        animation: anim-fill-like $anim-fill-like-duration $anim-fill-like-delay
+          forwards;
+        stroke: transparent;
+      }
+    }
+  }
+
+  & .dish__article {
+    border: none;
+    @include box-shadow($colour-btn-shadow);
+    background: white;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 100%;
+    height: 4.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0.5rem 0rem;
+    cursor: pointer;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    outline: none;
+    will-change: transform; /*correction bug overflow hidden border corner safari but no shadow*/
+    // -webkit-mask-image: -webkit-radial-gradient(white, black); /*correction bug overflow hidden border corner safari but no shadow*/
+    // mask-image: radial-gradient(white, black);
+
+    &:hover {
+      & > .dish__informations {
+        width: inherit;
+      }
+      & > .check-icone {
+        width: 5rem;
+        transform: translate(0);
+      }
+      & svg {
+        transform: rotate(360deg);
+        transition: transform 380ms 100ms;
+      }
+    }
+  }
+
+  & .dish__informations {
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
+    padding: 0.8rem 0.8rem 0rem 0.8rem;
+    width: 100%;
+    min-width: 70%;
+    max-width: 100%;
+    line-height: 1.5rem;
+  }
+
+  & h2 {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 100;
+    position: relative;
+  }
+
+  & .dish__title {
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  & .section__title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 15%;
+      border-bottom: 4px solid $colour-lightgreen;
+    }
+  }
+
+  & .section__menu {
+    & .item-menu {
+      opacity: 0;
+      transform: translateY(1rem);
+      animation: anim-visibility-menu $anim-visibility-menu-item-duration
+        ease-in-out forwards;
+    }
+
+    & .list-menu {
+      height: 0;
+      animation: anim-visibility-menu $anim-visibility-menu-category-duration
+        ease-in-out forwards;
+      @for $j from 1 through $nb-category-menu {
+        &--#{$j} {
+          animation-delay: $anim-start-restaurants-duration +
+            $anim-visibility-menu-category-delay *
+            $j;
+          & .item-menu {
+            @for $i from 1 through $nb-display-item-menu {
+              &--#{$i} {
+                animation-delay: $anim-start-restaurants-duration +
+                  $anim-visibility-menu-category-delay *
+                  $j +
+                  ($anim-visibility-menu-item-delay * $i);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .dish__details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-weight: 100;
+
+    & .dish__price {
+      padding: 0rem 0.5rem;
+      font-weight: 500;
+      justify-self: flex-end;
+    }
+  }
+
+  & .dish__description {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  & .check-icone {
+    width: 0rem;
+    height: 4.5rem;
+    background-color: #99e2d0;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    border-radius: 2rem 2rem 0rem 0rem;
-    position:relative;
-    overflow:hidden;
-    bottom:3rem;
-    left:0rem;
-    margin-bottom: -3rem;
-    animation: start-hidden $anim-start-restaurants-duration $anim-start-restaurants-delay  ease-in-out forwards;
-
-    & h1 {
-        font-family: 'shrikhand';
-        text-align: left;
-        margin: 1rem 0rem;
-        align-self:flex-start;
-        font-size:1.7rem;
-        font-weight:100;
+    transform: translateX(100%);
+    transition: all 480ms ease-out;
+    transform-origin: right;
+    & svg {
+      width: 1.5rem;
+      fill: white;
+      transform: rotate(0deg);
     }
-
-    & .section__header {
-        padding:0;
-        position:relative;
-    }
-
-    &__like {
-        position:absolute;
-        top:0.8rem;
-        right:1rem;
-        height: 2.5rem;
-        width: 2.5rem;
-        & svg {
-            margin:0.5rem;
-            & path{
-                fill: transparent;
-                stroke: $colour-blackgrey;
-                }
-        }
-        &:hover {
-            path {
-            fill: url(#svg-gradient);
-            animation: anim-fill-like $anim-fill-like-duration $anim-fill-like-delay forwards;
-            stroke: transparent;
-            }
-        }
-    }
-
-    & .dish__article {
-        border:none;
-        @include box-shadow($colour-btn-shadow);
-        background: white;
-        border-radius: 1rem;
-        width: 100%;
-        max-width:100%;
-        height:4.5rem;
-        display: flex;
-        flex-wrap: nowrap;
-        margin: 0.5rem 0rem;
-        cursor: pointer;
-        align-items: flex-start;
-        justify-content:flex-start;
-        overflow: hidden;
-        outline: none;
-        will-change: transform; /*correction bug overflow hidden border corner safari but no shadow*/
-        // -webkit-mask-image: -webkit-radial-gradient(white, black); /*correction bug overflow hidden border corner safari but no shadow*/
-        // mask-image: radial-gradient(white, black);
-
-        &:hover {
-          & > .dish__informations{
-            width:inherit;
-          }
-          & > .check-icone {
-            width:5rem;
-            transform:translate(0);
-          }
-          & svg {
-            transform:rotate(360deg);
-            transition: transform 380ms 100ms;
-          }
-        }
-      }
-      
-      & .dish__informations {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        padding:0.8rem 0.8rem 0rem 0.8rem;
-        width:100%;
-        min-width:70%;
-        max-width:100%;
-        line-height: 1.5rem;
-      }
-      
-      & h2 {
-        font-size: 1rem;
-        text-align:left;
-        font-weight: 100;
-        position:relative; 
-      }
-
-      & .dish__title {
-        font-size: 1.1rem;
-        text-align:left;
-        font-weight: 500;
-        position:relative; 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-      }
-      
-      & .section__title {
-        text-transform: uppercase;
-        margin-bottom:1rem;
-        &::before{
-            content : "";
-            position: absolute;
-            left    : 0;
-            bottom  : 0;
-            height  : 1px;
-            width   : 15%;
-            border-bottom: 4px solid $colour-lightgreen;
-        }
-      }
-
-      & .section__menu {
-
-        & .item-menu {
-            opacity: 0;
-            transform: translateY(1rem); 
-            animation: anim-visibility-menu $anim-visibility-menu-item-duration ease-in-out forwards;  
-        }
-
-        & .list-menu {
-            height:0;
-            animation: anim-visibility-menu $anim-visibility-menu-category-duration ease-in-out forwards;
-            @for $j from 1 through $nb-category-menu {
-                &--#{$j} {
-                    animation-delay: $anim-start-restaurants-duration+$anim-visibility-menu-category-delay*$j;
-                  & .item-menu {
-                    @for $i from 1 through $nb-display-item-menu {
-                            &--#{$i} {
-                                animation-delay: $anim-start-restaurants-duration +$anim-visibility-menu-category-delay*$j + ($anim-visibility-menu-item-delay * $i);
-                            }
-                    }
-                    }
-          }
-        }
-          
-        }
-      }
-    
-      & .dish__details {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        font-weight: 100;
-
-        & .dish__price {
-            padding: 0rem 0.5rem;
-            font-weight: 500;
-            justify-self: flex-end;
-            }
-      }
-      
-      & .dish__description {
-        display: inline-block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: left;
-      }
-      
-      
-      & .check-icone {
-        width: 0rem;
-        height:4.5rem;
-        background-color: #99e2d0;
-        display:flex;
-        align-items: center;
-        justify-content:center; 
-        transform:translateX(100%);
-        transition: all 480ms ease-out;
-        transform-origin:right;
-        & svg {
-            width: 1.5rem;
-            fill: white;
-            transform:rotate(0deg);
-        }
-      }
-      
-
+  }
 }
 
 #load-spinner-restaurant {
-    height:20rem;
-    overflow: hidden;
-    width:100%;
-    height:100%;
-    background-color:#f6f6f6;
-    z-index:9999;
-    position:absolute;
-    @include flex-center;
-    animation: start-animation-visibility $anim-start-restaurants-duration 
+  height: 20rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  z-index: 9999;
+  position: absolute;
+  @include flex-center;
+  animation: anim-start__visibility $anim-start-restaurants-duration
     $anim-start-restaurants-delay ease-in-out forwards;
 }
 .anim-restaurant {
-    position:relative;
+  position: relative;
 }
 
 .icone {
-    position:absolute;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: transparent;
-    animation: icone-rotation 3s infinite cubic-bezier(.7,0,.16,1);
-    transform-origin: 10% 10%;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  animation: anim-load-spinner__icone-rotation 3s infinite cubic-bezier(0.7, 0, 0.16, 1);
+  transform-origin: 10% 10%;
+}
+
+.icone path {
+  fill: $colour-blackgrey;
+}
+
+#icone-2 {
+  animation: anim-load-spinner__icone-rotation-reverse 3s infinite cubic-bezier(0.7, 0, 0.16, 1);
+}
+
+.loader-restaurant {
+  color: $colour-tertiary;
+  font-size: 5rem;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateZ(0);
+  animation: anim-load-spinner__loader-border 1.7s infinite ease, anim-load-spinner__loader-round 1.7s infinite ease;
+  margin: 1rem 0rem 0 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-menu {
+    padding: $layout-margin $layout-margin * 8 $layout-margin * 2 $layout-margin *
+      8;
+    border-radius: 0rem;
+    & section {
+      margin: auto;
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    & .dish__article {
+      width: 25rem;
+    }
+
+    &__like {
+      right: -5rem;
+    }
+
+    & .section__title {
+      &::before {
+        width: 100%;
+      }
+    }
   }
-  
-  .icone path {
-    fill:$colour-blackgrey;
-  }
-
-  #icone-2 {
-    animation: icone-rotation-reverse 3s infinite cubic-bezier(.7,0,.16,1);
-  }
-  
-  .loader-restaurant {
-    color: $colour-tertiary;
-    font-size: 5rem;
-    overflow: hidden;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    position:absolute;
-    transform: translateZ(0);
-    animation: loader-border 1.7s infinite ease, round 1.7s infinite ease;
-    margin: 1rem 0rem 0 0.5rem;
-  }
-
-
-
-
-@media screen and (min-width: 768px)  {
-    .restaurant-menu  {
-        padding: $layout-margin $layout-margin*8 $layout-margin*2 $layout-margin*8;
-        border-radius: 0rem;
-        & section {
-            margin: auto;
-            max-width: 1200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        & .dish__article {
-            width: 25rem;
-        }
-
-        &__like {
-            right:-5rem;
-        }
-        
-        & .section__title {
-            &::before{
-                width   : 100%;
-            }
-          }
-        }
-      
 }

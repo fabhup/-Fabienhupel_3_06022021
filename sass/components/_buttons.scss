@@ -1,3 +1,5 @@
-.btn {
-    @include btn
+.main-btn {
+  @include btn;
+  min-width: 60%;
+  width: max-content;
 }

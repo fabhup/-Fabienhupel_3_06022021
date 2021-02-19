@@ -1,58 +1,64 @@
-
 @font-face {
-    font-family: "shrikhand";
-    src: url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff2") format('woff2'),
-    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff") format('woff'),
-    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.svg#Shrikhand") format('svg'), /* Legacy iOS */
-    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.ttf") format('truetype');
-    ;
-   }
+  font-family: "shrikhand";
+  src: url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff2")
+      format("woff2"),
+    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.woff")
+      format("woff"),
+    url("../../public/font/shrikhand/shrikhand-v6-latin-regular.svg#Shrikhand")
+      format("svg"),
+    /* Legacy iOS */
+      url("../../public/font/shrikhand/shrikhand-v6-latin-regular.ttf")
+      format("truetype");
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 100;
-    line-height: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 1rem;
-    & + p {
-        font-size: 1.1rem;
-        font-weight: 100;
-        line-height: 1.3rem;
-        opacity:0.5;
-    }
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1rem;
+  & + p {
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.3rem;
+    opacity: 0.5;
+  }
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-textarea, p, button, .btn {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    line-height: 1.2rem;
+textarea,
+p,
+button,
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
 a {
-    text-decoration: inherit;
-    color:inherit;
-    cursor: pointer;
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }

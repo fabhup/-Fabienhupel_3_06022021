@@ -1,7 +1,8 @@
 .main-container {
-    section:nth-child(2n) {
-        background-color: $colour-light-backgrnd;
-      }
-    overflow:hidden;
-    animation: start-hidden $anim-start-duration $anim-start-delay  ease-in-out forwards;
+  section:nth-child(2n) {
+    background-color: $colour-light-backgrnd;
+  }
+  overflow: hidden;
+  animation: anim-start__hidden $anim-start-duration $anim-start-delay ease-in-out
+    forwards;
 }

@@ -1,53 +1,56 @@
 .footer {
-    padding: $layout-margin $layout-margin $layout-margin*1.5 $layout-margin;
-    background: $colour-blackgrey;
-    color:white;
+  padding: $layout-margin $layout-margin $layout-margin * 1.5 $layout-margin;
+  background: $colour-blackgrey;
+  color: white;
 
-    &__logo {
-        height: 1.1rem;
-        & path {
-            fill:white
-        }
+  &__logo {
+    height: 1.1rem;
+    & path {
+      fill: white;
     }
+  }
 
-    &__link-with-icone{
-        & img {
-            width:0.8rem;
-            height:0.8rem;
-            filter: invert(100%);
-            padding-right: 0.5rem;
-        }
-        &--rotate img {
-            transform: rotate(-20deg);
-        }
+  &__link-with-icone {
+    & img {
+      width: 0.8rem;
+      height: 0.8rem;
+      filter: invert(100%);
+      padding-right: 0.5rem;
     }
+    &--rotate img {
+      transform: rotate(-20deg);
+    }
+  }
 
-    &.footer-restaurants {
-        animation: start-hidden $anim-start-restaurants-duration $anim-start-restaurants-delay  ease-in-out forwards;
-    }
+  &.footer-restaurants {
+    animation: anim-start__hidden $anim-start-restaurants-duration
+      $anim-start-restaurants-delay ease-in-out forwards;
+  }
 
-    &.footer-home {
-        animation: start-hidden $anim-start-duration $anim-start-delay  ease-in-out forwards;
-    }
+  &.footer-home {
+    animation: anim-start__hidden $anim-start-duration $anim-start-delay ease-in-out
+      forwards;
+  }
 }
 
-@media screen and (min-width: 768px)  {
-    .footer {
-        padding: $layout-margin $layout-margin*10 $layout-margin*2 $layout-margin*10;
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: $layout-margin $layout-margin * 10 $layout-margin * 2
+      $layout-margin * 10;
 
-        &__logo {
-            width:100%;
-        }
-        &__list-links {
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            & li {
-                margin: 0rem 0.5rem;
-                width:100%;
-                text-align: center;
-            }
-        }
-        }
+    &__logo {
+      width: 100%;
+    }
+    &__list-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      & li {
+        margin: 0rem 0.5rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 }
